@@ -38,6 +38,10 @@ def echo_all(message):
     text = message.text
     party = ppl.get(cid)
 
+    if text == u"iddqd":
+        bot.send_message(cid, str(ppl))
+        return
+        
     if text == btn_change:
         if party:
             bot.send_message(party, "disconnected ...")
